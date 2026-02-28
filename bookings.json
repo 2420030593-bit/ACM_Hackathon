@@ -1,0 +1,13 @@
+[
+  {
+    "id": "1",
+    "intent": "taxi_booking",
+    "timestamp": "2026-02-27T21:45:00Z",
+    "details": {
+      "destination": "Goa Airport",
+      "driver": "Ravi K.",
+      "vehicle": "Toyota Camry (White)",
+      "fare": "₹550"
+    }
+  }
+]

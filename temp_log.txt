@@ -1,0 +1,100 @@
+﻿01:58:42 | httpx              | INFO  | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+01:58:42 | aura.memory        | INFO  | Remembered: [route] Charge=searched_general_chat
+01:58:42 | aura.app           | INFO  | Intent: general_chat | Source: ollama
+01:58:42 | comtypes.client._code_cache | INFO  | Imported existing <module 'comtypes.gen' from 'C:\\Users\\kondr\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+01:58:42 | comtypes.client._code_cache | INFO  | Using writeable comtypes cache directory: 'C:\Users\kondr\AppData\Local\Programs\Python\Python311\Lib\site-packages\comtypes\gen'
+01:58:43 | aura.app           | INFO  | Response sent successfully.
+01:58:52 | aura.app           | INFO  | Input: 'book a cab to Charminar'
+01:58:52 | aura.app           | INFO  | Language: English (en)
+01:59:02 | httpx              | INFO  | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+01:59:02 | aura.memory        | INFO  | Remembered: [route] Charge=searched_general_chat
+01:59:02 | aura.app           | INFO  | Intent: general_chat | Source: ollama
+01:59:03 | aura.app           | INFO  | Response sent successfully.
+01:59:03 | aura.app           | INFO  | Input: 'book a cab to Charminar'
+01:59:03 | aura.app           | INFO  | Language: English (en)
+01:59:14 | httpx              | INFO  | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+01:59:14 | aura.memory        | INFO  | Remembered: [route] Charminar=searched_taxi_booking
+01:59:14 | aura.app           | INFO  | Intent: taxi_booking | Source: ollama
+01:59:14 | aura.app           | INFO  | Response sent successfully.
+01:59:22 | httpx              | INFO  | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+01:59:22 | aura.memory        | INFO  | Remembered: [route] Charminar=searched_taxi_booking
+01:59:22 | aura.app           | INFO  | Intent: taxi_booking | Source: ollama
+01:59:22 | aura.app           | INFO  | Response sent successfully.
+01:59:33 | httpx              | INFO  | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+01:59:33 | aura.memory        | INFO  | Remembered: [route] Charminar=searched_taxi_booking
+01:59:33 | aura.app           | INFO  | Intent: taxi_booking | Source: ollama
+01:59:33 | aura.app           | INFO  | Response sent successfully.
+01:59:33 | aura.app           | ERROR | Automation error: trigger_automation() got multiple values for argument 'destination'
+02:10:04 | aura.app           | INFO  | AURA v2 shut down.
+02:10:19 | aura.app           | INFO  | AURA v2 starting up...
+02:14:50 | aura.app           | INFO  | AURA v2 starting up...
+02:14:50 | aura.app           | INFO  | AURA v2 shut down.
+02:15:22 | aura.app           | INFO  | AURA v2 starting up...
+02:15:38 | aura.app           | INFO  | Input: 'book me movie tickets for Inception tonight'
+02:15:38 | aura.app           | INFO  | Language: English (en)
+02:15:38 | httpx              | INFO  | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
+02:15:38 | aura.llm           | WARNING | Ollama HTTP 404: {"error":"model 'qwen2.5:7b' not found"}
+02:15:38 | aura.memory        | INFO  | Remembered: [route] Inception Tonight=searched_general_chat
+02:15:38 | aura.app           | INFO  | Intent: general_chat | Source: keyword
+02:15:38 | comtypes.client._code_cache | INFO  | Imported existing <module 'comtypes.gen' from 'C:\\Users\\kondr\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+02:15:38 | comtypes.client._code_cache | INFO  | Using writeable comtypes cache directory: 'C:\Users\kondr\AppData\Local\Programs\Python\Python311\Lib\site-packages\comtypes\gen'
+02:15:39 | aura.app           | INFO  | Response sent successfully.
+02:17:00 | aura.app           | INFO  | Input: 'book me movie tickets for Inception tonight'
+02:17:00 | aura.app           | INFO  | Language: English (en)
+02:17:03 | httpx              | INFO  | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 500 Internal Server Error"
+02:17:03 | aura.llm           | WARNING | Ollama HTTP 500: {"error":"llama runner process has terminated: error loading model: unable to allocate CPU buffer"}
+02:17:03 | aura.memory        | INFO  | Remembered: [route] Inception Tonight=searched_general_chat
+02:17:03 | aura.app           | INFO  | Intent: general_chat | Source: keyword
+02:17:03 | aura.app           | INFO  | Response sent successfully.
+02:17:36 | aura.app           | INFO  | AURA v2 starting up...
+02:17:36 | aura.app           | INFO  | AURA v2 shut down.
+02:18:06 | aura.app           | INFO  | AURA v2 starting up...
+02:18:23 | aura.app           | INFO  | Input: 'book me movie tickets for Inception tonight'
+02:18:23 | aura.app           | INFO  | Language: English (en)
+02:18:26 | httpx              | INFO  | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 500 Internal Server Error"
+02:18:26 | aura.llm           | WARNING | Ollama HTTP 500: {"error":"llama runner process has terminated: error loading model: unable to allocate CPU buffer"}
+02:18:26 | aura.memory        | INFO  | Remembered: [route] Inception Tonight=searched_movie_booking
+02:18:26 | aura.app           | INFO  | Intent: movie_booking | Source: keyword
+02:18:26 | comtypes.client._code_cache | INFO  | Imported existing <module 'comtypes.gen' from 'C:\\Users\\kondr\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+02:18:26 | comtypes.client._code_cache | INFO  | Using writeable comtypes cache directory: 'C:\Users\kondr\AppData\Local\Programs\Python\Python311\Lib\site-packages\comtypes\gen'
+02:18:27 | aura.app           | INFO  | Response sent successfully.
+02:18:29 | aura.app           | ERROR | Automation error: trigger_automation() got multiple values for argument 'destination'
+02:18:49 | aura.app           | INFO  | AURA v2 starting up...
+02:18:49 | aura.app           | INFO  | AURA v2 shut down.
+02:19:38 | aura.app           | INFO  | AURA v2 starting up...
+02:19:55 | aura.app           | INFO  | Input: 'book me movie tickets for Inception tonight'
+02:19:55 | aura.app           | INFO  | Language: English (en)
+02:19:59 | httpx              | INFO  | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 500 Internal Server Error"
+02:19:59 | aura.llm           | WARNING | Ollama HTTP 500: {"error":"llama runner process has terminated: error loading model: unable to allocate CPU buffer"}
+02:19:59 | aura.memory        | INFO  | Remembered: [route] Inception Tonight=searched_movie_booking
+02:19:59 | aura.app           | INFO  | Intent: movie_booking | Source: keyword
+02:19:59 | comtypes.client._code_cache | INFO  | Imported existing <module 'comtypes.gen' from 'C:\\Users\\kondr\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+02:19:59 | comtypes.client._code_cache | INFO  | Using writeable comtypes cache directory: 'C:\Users\kondr\AppData\Local\Programs\Python\Python311\Lib\site-packages\comtypes\gen'
+02:19:59 | aura.app           | INFO  | Response sent successfully.
+02:20:01 | aura.app           | ERROR | Automation error: trigger_automation() got multiple values for argument 'destination'
+02:21:50 | aura.app           | INFO  | AURA v2 starting up...
+02:22:04 | aura.app           | INFO  | Input: 'book me movie tickets for Inception tonight'
+02:22:04 | aura.app           | INFO  | Language: English (en)
+02:22:07 | httpx              | INFO  | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 500 Internal Server Error"
+02:22:07 | aura.llm           | WARNING | Ollama HTTP 500: {"error":"llama runner process has terminated: error loading model: unable to allocate CPU buffer"}
+02:22:07 | aura.memory        | INFO  | Remembered: [route] Inception Tonight=searched_movie_booking
+02:22:07 | aura.app           | INFO  | Intent: movie_booking | Source: keyword
+02:22:07 | comtypes.client._code_cache | INFO  | Imported existing <module 'comtypes.gen' from 'C:\\Users\\kondr\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+02:22:07 | comtypes.client._code_cache | INFO  | Using writeable comtypes cache directory: 'C:\Users\kondr\AppData\Local\Programs\Python\Python311\Lib\site-packages\comtypes\gen'
+02:22:07 | aura.app           | INFO  | Response sent successfully.
+02:22:09 | aura.automation    | INFO  | Using dynamic LLM handler for intent: movie_booking
+02:22:09 | aura.automation    | INFO  | Asking LLM to generate script...
+02:22:14 | aura.automation    | ERROR | Failed to generate/execute dynamic LLM script: 500 Server Error: Internal Server Error for url: http://localhost:11434/api/generate
+02:29:59 | aura.app           | INFO  | AURA v2 starting up...
+02:30:13 | aura.app           | INFO  | Input: 'book me movie tickets for Inception tonight'
+02:30:13 | aura.app           | INFO  | Language: English (en)
+02:30:15 | httpx              | INFO  | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 500 Internal Server Error"
+02:30:15 | aura.llm           | WARNING | Ollama HTTP 500: {"error":"memory layout cannot be allocated"}
+02:30:15 | aura.memory        | INFO  | Remembered: [route] Inception Tonight=searched_movie_booking
+02:30:15 | aura.app           | INFO  | Intent: movie_booking | Source: keyword
+02:30:15 | comtypes.client._code_cache | INFO  | Imported existing <module 'comtypes.gen' from 'C:\\Users\\kondr\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+02:30:15 | comtypes.client._code_cache | INFO  | Using writeable comtypes cache directory: 'C:\Users\kondr\AppData\Local\Programs\Python\Python311\Lib\site-packages\comtypes\gen'
+02:30:16 | aura.app           | INFO  | Response sent successfully.
+02:30:18 | aura.automation    | INFO  | Using dynamic LLM handler for intent: movie_booking
+02:30:18 | aura.automation    | INFO  | Asking LLM to generate script...
+02:30:22 | aura.automation    | ERROR | Failed to generate/execute dynamic LLM script: 500 Server Error: Internal Server Error for url: http://localhost:11434/api/generate

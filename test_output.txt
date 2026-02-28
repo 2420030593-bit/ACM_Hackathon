@@ -1,0 +1,101 @@
+﻿python : 2026-02-28 
+03:49:37,781 | httpx       
+       | INFO  | HTTP 
+Request: POST http://localh
+ost:11434/api/generate 
+"HTTP/1.1 200 OK"
+At line:1 char:32
++ $env:PYTHONIOENCODING="ut
+f-8"; python test_e2e.py 
+2>&1 | Out-File -En ...
++                          
+      
+~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecifi    ed: 
+(2026-02-28 03    
+:4...TTP/1.1 200 O    
+K":String) [], Rem    
+oteException
+    + FullyQualifiedEr    
+rorId : NativeComm    
+andError
+ 
+2026-02-28 03:49:37,927 | 
+aura.llm           | 
+WARNING | Failed to parse 
+LLM JSON output for 
+entities.
+2026-02-28 03:49:44,504 | 
+httpx              | INFO  
+| HTTP Request: POST http:/
+/localhost:11434/api/genera
+te "HTTP/1.1 200 OK"
+2026-02-28 03:49:44,514 | 
+aura.llm           | 
+WARNING | Failed to parse 
+LLM JSON output for 
+entities.
+2026-02-28 03:49:49,076 | 
+httpx              | INFO  
+| HTTP Request: POST http:/
+/localhost:11434/api/genera
+te "HTTP/1.1 200 OK"
+2026-02-28 03:49:49,086 | 
+aura.llm           | 
+WARNING | Failed to parse 
+LLM JSON output for 
+entities.
+2026-02-28 03:49:53,273 | 
+httpx              | INFO  
+| HTTP Request: POST http:/
+/localhost:11434/api/genera
+te "HTTP/1.1 200 OK"
+2026-02-28 03:49:53,291 | 
+aura.llm           | 
+WARNING | Failed to parse 
+LLM JSON output for 
+entities.
+============================================================
+TEST 1: Intent Detection
+============================================================
+  Γ£à PASS | 'I want to get a bus ticket to vijaywada' ΓåÆ bus_booking
+  Γ£à PASS | 'book a bus to bangalore' ΓåÆ bus_booking
+  Γ£à PASS | 'find me a bus from hyderabad to mumbai' ΓåÆ bus_booking
+  Γ£à PASS | 'book a cab to the airport' ΓåÆ taxi_booking
+  Γ£à PASS | 'I need an uber ride to banjara hills' ΓåÆ taxi_booking
+  Γ£à PASS | 'get me an ola to jubilee hills' ΓåÆ taxi_booking
+  Γ£à PASS | 'book a flight to delhi' ΓåÆ flight_booking
+  Γ£à PASS | 'I want to fly to mumbai tomorrow' ΓåÆ flight_booking
+  Γ£à PASS | 'find flights from hyderabad to goa' ΓåÆ flight_booking
+  Γ£à PASS | 'find a hotel in goa' ΓåÆ hotel_booking
+  Γ£à PASS | 'book a room in mumbai for 2 nights' ΓåÆ hotel_booking
+  Γ£à PASS | 'I need accommodation in bangalore' ΓåÆ hotel_booking
+
+============================================================
+TEST 2: Entity Extraction (Regex)
+============================================================
+  Γ£à PASS | 'I want a bus ticket to vijayawada' ΓåÆ destination: 'Vijayawada' (expected: 'Vijayawada')
+  Γ£à PASS | 'book a cab to the airport' ΓåÆ destination: 'The Airport' (expected: 'Airport')
+  Γ£à PASS | 'find a hotel in goa for 3 people' ΓåÆ destination: 'Goa' (expected: 'Goa')
+  Γ£à PASS | 'flight to delhi tomorrow' ΓåÆ destination: 'Delhi Tomorrow' (expected: 'Delhi')
+
+============================================================
+TEST 3: Regex Patterns Valid
+============================================================
+  Γ£à taxi_booking: pattern compiles OK
+  Γ£à bus_booking: pattern compiles OK
+  Γ£à flight_booking: pattern compiles OK
+  Γ£à hotel_booking: pattern compiles OK
+  Γ£à restaurant_booking: pattern compiles OK
+  Γ£à tour_booking: pattern compiles OK
+  Γ£à spa_booking: pattern compiles OK
+  Γ£à travel_planning: pattern compiles OK
+  Γ£à emergency: pattern compiles OK
+  Γ£à translation: pattern compiles OK
+  Γ£à price_check: pattern compiles OK
+  Γ£à movie_booking: pattern compiles OK
+
+============================================================
+ALL INTENT DETECTION TESTS PASSED Γ£à
+============================================================

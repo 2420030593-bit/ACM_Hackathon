@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+websockets
+vosk
+pyttsx3
+httpx
+aiosqlite
+fpdf2
+playwright
+pydantic
+python-multipart

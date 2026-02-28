@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA – Voice-First AI Concierge</title>
+    <meta name="description"
+        content="AURA is a fully voice-driven autonomous AI concierge. Speak in any language — AURA listens, understands, books, and responds by voice.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <!-- Ambient animated background -->
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Main app -->
+    <div class="app">
+
+        <!-- Top bar -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <div class="aura-logo">
+                    <div class="logo-ring"></div>
+                    <div class="logo-core"></div>
+                </div>
+                <div class="topbar-title">
+                    <h1>AURA</h1>
+                    <span class="topbar-sub">Voice-First AI Concierge</span>
+                </div>
+            </div>
+            <div class="topbar-right">
+                <nav class="top-nav">
+                    <a href="/bookings" class="nav-link">History</a>
+                </nav>
+                <div class="status-pill" id="status-pill">
+                    <span class="status-dot"></span>
+                    <span class="status-label" id="status-label">Ready</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Voice interaction area -->
+        <main class="voice-main">
+
+            <!-- Current state display -->
+            <div class="state-display" id="state-display">
+                <p class="state-headline" id="state-headline">Tap the mic and speak</p>
+                <p class="state-subtext" id="state-subtext">I understand any language — just talk naturally</p>
+            </div>
+
+            <!-- Voice waveform ring -->
+            <div class="mic-area">
+                <div class="waveform-ring" id="waveform-ring">
+                    <div class="wave-bar" style="--i:0"></div>
+                    <div class="wave-bar" style="--i:1"></div>
+                    <div class="wave-bar" style="--i:2"></div>
+                    <div class="wave-bar" style="--i:3"></div>
+                    <div class="wave-bar" style="--i:4"></div>
+                    <div class="wave-bar" style="--i:5"></div>
+                    <div class="wave-bar" style="--i:6"></div>
+                    <div class="wave-bar" style="--i:7"></div>
+                    <div class="wave-bar" style="--i:8"></div>
+                    <div class="wave-bar" style="--i:9"></div>
+                    <div class="wave-bar" style="--i:10"></div>
+                    <div class="wave-bar" style="--i:11"></div>
+                    <div class="wave-bar" style="--i:12"></div>
+                    <div class="wave-bar" style="--i:13"></div>
+                    <div class="wave-bar" style="--i:14"></div>
+                    <div class="wave-bar" style="--i:15"></div>
+                    <div class="wave-bar" style="--i:16"></div>
+                    <div class="wave-bar" style="--i:17"></div>
+                    <div class="wave-bar" style="--i:18"></div>
+                    <div class="wave-bar" style="--i:19"></div>
+                </div>
+                <button class="mic-btn" id="mic-btn" title="Press to speak">
+                    <svg class="mic-icon" id="mic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                        <line x1="12" y1="19" x2="12" y2="23" />
+                        <line x1="8" y1="23" x2="16" y2="23" />
+                    </svg>
+                    <svg class="stop-icon hidden" id="stop-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <rect x="6" y="6" width="12" height="12" rx="2" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Live transcript -->
+            <div class="transcript-area" id="transcript-area">
+                <div class="transcript-box hidden" id="transcript-box">
+                    <div class="transcript-label">
+                        <span class="transcript-dot"></span>
+                        You said:
+                    </div>
+                    <p class="transcript-text" id="transcript-text"></p>
+                </div>
+            </div>
+
+            <!-- Response card -->
+            <div class="response-area" id="response-area">
+                <!-- Dynamically filled -->
+            </div>
+
+            <!-- Conversation history (minimal) -->
+            <div class="history-area" id="history-area">
+                <!-- Past interactions shown as compact cards -->
+            </div>
+
+        </main>
+
+        <!-- Bottom capabilities bar -->
+        <footer class="capabilities-bar">
+            <div class="cap-item"><span class="cap-icon">🚕</span><span class="cap-label">Taxi</span></div>
+            <div class="cap-item"><span class="cap-icon">🗺️</span><span class="cap-label">Tours</span></div>
+            <div class="cap-item"><span class="cap-icon">🍽️</span><span class="cap-label">Dining</span></div>
+            <div class="cap-item"><span class="cap-icon">🏨</span><span class="cap-label">Hotels</span></div>
+            <div class="cap-item"><span class="cap-icon">🧖</span><span class="cap-label">Spa</span></div>
+            <div class="cap-item"><span class="cap-icon">🌐</span><span class="cap-label">Any Language</span></div>
+        </footer>
+
+    </div>
+
+    <script src="/static/script.js?v=2.0"></script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA – Past Bookings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .bookings-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .booking-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        .booking-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .booking-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .booking-intent {
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--primary);
+        }
+        .booking-date {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .booking-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+        }
+        .detail-item label {
+            display: block;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 4px;
+        }
+        .detail-item span {
+            font-weight: 500;
+        }
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .empty-state {
+            text-align: center;
+            padding: 100px 0;
+            color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <div class="app">
+        <header class="topbar">
+            <div class="topbar-left">
+                <div class="aura-logo">
+                    <div class="logo-ring"></div>
+                    <div class="logo-core"></div>
+                </div>
+                <div class="topbar-title">
+                    <h1>AURA</h1>
+                    <span class="topbar-sub">Past Bookings History</span>
+                </div>
+            </div>
+            <nav class="topbar-right">
+                <a href="/" class="nav-link">← Back to Voice</a>
+            </nav>
+        </header>
+
+        <main class="bookings-container">
+            <div id="bookings-list">
+                <!-- Data will be loaded here -->
+            </div>
+        </main>
+    </div>
+
+    <script>
+        async function loadBookings() {
+            const list = document.getElementById('bookings-list');
+            try {
+                const resp = await fetch('/api/bookings');
+                const data = await resp.json();
+                
+                if (data.length === 0) {
+                    list.innerHTML = '<div class="empty-state">No bookings found yet.</div>';
+                    return;
+                }
+
+                list.innerHTML = data.reverse().map(b => `
+                    <div class="booking-card">
+                        <div class="booking-header">
+                            <span class="booking-intent">${b.intent.replace('_', ' ')}</span>
+                            <span class="booking-date">${new Date(b.timestamp).toLocaleString()}</span>
+                        </div>
+                        <div class="booking-details">
+                            ${Object.entries(b.details).map(([k, v]) => `
+                                <div class="detail-item">
+                                    <label>${k.replace('_', ' ')}</label>
+                                    <span>${v}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `).join('');
+            } catch (err) {
+                list.innerHTML = '<div class="empty-state">Failed to load bookings.</div>';
+            }
+        }
+        loadBookings();
+    </script>
+</body>
+</html>

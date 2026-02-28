@@ -1,0 +1,65 @@
+{
+  "test@aura.com": {
+    "email": "test@aura.com",
+    "name": "Test User",
+    "password_hash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "provider": "local",
+    "created_at": "2026-02-27T18:47:49.245701"
+  },
+  "test@test.com": {
+    "email": "test@test.com",
+    "name": "Test User",
+    "password_hash": "ecd71870d1963316a97e3ac3408c9835ad8cf0f3c1bc703527c30265534f75ae",
+    "provider": "local",
+    "created_at": "2026-02-27T19:19:52.667800"
+  },
+  "123@gmail.com": {
+    "email": "123@gmail.com",
+    "name": "Hemanth",
+    "password_hash": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+    "provider": "local",
+    "created_at": "2026-02-27T19:31:29.754520"
+  },
+  "test_translate@example.com": {
+    "email": "test_translate@example.com",
+    "name": "Test User",
+    "password_hash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "provider": "local",
+    "created_at": "2026-02-27T20:13:14.980568"
+  },
+  "2420030246@klh.edu.in": {
+    "email": "2420030246@klh.edu.in",
+    "name": "Hemanth",
+    "password_hash": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+    "provider": "local",
+    "created_at": "2026-02-27T21:34:32.642368"
+  },
+  "test2@aura.com": {
+    "email": "test2@aura.com",
+    "name": "Test",
+    "password_hash": "9b8769a4a742959a2d0298c36fb70623f2dfacda8436237df08d8dfd5b37374c",
+    "provider": "local",
+    "created_at": "2026-02-27T22:57:51.934972"
+  },
+  "e2e@test.com": {
+    "email": "e2e@test.com",
+    "name": "E2E",
+    "password_hash": "9b8769a4a742959a2d0298c36fb70623f2dfacda8436237df08d8dfd5b37374c",
+    "provider": "local",
+    "created_at": "2026-02-27T22:58:22.868971"
+  },
+  "flow@test.com": {
+    "email": "flow@test.com",
+    "name": "Flow",
+    "password_hash": "9b8769a4a742959a2d0298c36fb70623f2dfacda8436237df08d8dfd5b37374c",
+    "provider": "local",
+    "created_at": "2026-02-28T00:05:20.469277"
+  },
+  "final@t.com": {
+    "email": "final@t.com",
+    "name": "F",
+    "password_hash": "148de9c5a7a44d19e56cd9ae1a554bf67847afb0c58f6e12fa29ac7ddfca9940",
+    "provider": "local",
+    "created_at": "2026-02-28T00:43:49.920880"
+  }
+}
